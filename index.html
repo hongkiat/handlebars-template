@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Using Handlebars.js for Templating &mdash; Hongkiat.com</title>
+    <!-- demo scripts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/handlebars.js"></script>
+    <script src="../_nav/js/nav.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- nav script -->
+    <div class="demo-meta">
+        <h1 class="demo-title">Handlebars.js</h1>
+        <p class="demo-desc">This demo shows how to use Handlebars.js for templating</p>
+    </div>
+    <div class="demo-wrapper">
+
+        <div id="forrst" class="forrst-profile">
+            <script id="forrst-profile-template" type="text/x-handlebars-template">
+                <div class="profile">
+                    <figure class="avatar">
+                        <img src="{{photos.medium_url}}" alt="">
+                    </figure>
+                    <div class="person">
+                        <h3 class="person-name"><a href="{{url}}">{{name}}</a></h3>
+                        <div class="person-bio">{{{bio}}}</div>
+                    </div>
+                </div>
+                <div class="social-count">
+                    <div class="social-item social-posts">
+                        <div class="heading">Posts</div>
+                        <div class="counts">{{posts}}</div>
+                    </div>
+                    <div class="social-item social-followers">
+                        <div class="heading">Followers</div>
+                        <div class="counts">{{followers}}</div>
+                    </div>
+                    <div class="social-item social-following">
+                        <div class="heading">Following</div>
+                        <div class="counts">{{following}}</div>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+    <script>
+    var forrstProfile = {
+            "id": 24606,
+            "username": "jimmyliu",
+            "name": "Jimmy Liu",
+            "url": "http:\/\/forrst.com\/people\/jimmyliu",
+            "posts": "4",
+            "comments": "18",
+            "likes": "11",
+            "followers": "10",
+            "following": "2",
+            "typecast_posts": 4,    
+            "typecast_comments": 18,
+            "typecast_likes": 11,
+            "typecast_followers": 10,
+            "typecast_following": 2,
+            "photos": {
+                "xl_url": "https:\/\/secure.gravatar.com\/avatar\/3151a9294608c3143551aa265f00bf71.jpg?s=200&d=https:\/\/forrst.com\/assets\/images\/default_200.jpg",
+                "large_url": "https:\/\/secure.gravatar.com\/avatar\/3151a9294608c3143551aa265f00bf71.jpg?s=150&d=https:\/\/forrst.com\/assets\/images\/default_150.jpg",
+                "medium_url": "https:\/\/secure.gravatar.com\/avatar\/3151a9294608c3143551aa265f00bf71.jpg?s=75&d=https:\/\/forrst.com\/assets\/images\/default_75.jpg",
+                "small_url": "https:\/\/secure.gravatar.com\/avatar\/3151a9294608c3143551aa265f00bf71.jpg?s=45&d=https:\/\/forrst.com\/assets\/images\/default_45.jpg",
+                "thumb_url": "https:\/\/secure.gravatar.com\/avatar\/3151a9294608c3143551aa265f00bf71.jpg?s=25&d=https:\/\/forrst.com\/assets\/images\/default_25.jpg"
+            },
+            "bio": "<p>A graphic and web designer based in Cupertino, California. Follow me on Twitter <a href=\"http:\/\/twitter.com\/jimmyliu\"><\/a><a href=\"\/people\/jimmyliu\">@jimmyliu<\/a><\/p>\n",
+            "is_a": "developer & designer",
+            "homepage_url": "http:\/\/jliu.me",
+            "twitter": "jimmyliu",
+            "in_directory": false,
+            "tag_string": "photoshop,html,css,fullstack,php,javascript,responsive design"
+        };
+    var template = $('#forrst-profile-template').html();
+    var compile = Handlebars.compile(template);
+    var result = compile(forrstProfile);
+
+    $('#forrst').html(result);
+    </script>
+
+</body>
+
+</html>

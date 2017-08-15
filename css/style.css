@@ -1,0 +1,61 @@
+* {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+body {
+	background-color: #FBF8F5;
+	text-rendering: optimizeLegibility;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 300;
+}
+a {
+	text-decoration: none;
+}
+.forrst-profile {
+	color: rgba(255,255,255,0.8);
+	width: 600px;
+	background-color: #3B7140;
+	border: 1px solid #eee;
+	border-radius: 6px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 150px;
+	text-align: center;
+	overflow: hidden;
+}
+.forrst-profile .avatar img {
+	border-radius: 50%;
+	border: 5px solid rgba(255,255,255,0.3);
+}
+.forrst-profile .profile {
+	padding: 30px;
+}
+.forrst-profile .person-name {
+	font-weight: 700;
+}
+.forrst-profile .person-name a {
+	color: #053309;
+}
+.forrst-profile .person-name a:hover {
+	color: #d3cbbe;
+}
+.forrst-profile .person-bio a {
+	color: #fff;
+	border-bottom: 1px dotted rgba(255,255,255,0.3);
+}
+.forrst-profile .social-count {
+	padding: 18px 0;
+	display: table;
+	width: 100%;
+	background-color: #125b19;
+}
+.forrst-profile .social-item {
+	display: table-cell;
+	width: 33.33333%;
+}
+.forrst-profile .social-item .heading {
+	font-size: 11px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color:rgba(255,255,255,0.5);
+}
